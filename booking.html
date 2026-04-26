@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a room at Dawaipani Homestay near Darjeeling. Check availability and send your booking request online.">
+  <title>Book Your Stay — Dawaipani Homestay</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔</text></svg>">
+</head>
+<body>
+
+<nav id="mainNav" class="scrolled">
+  <a href="index.html" class="nav-logo">Dawai<span>pani</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="booking.html" class="nav-book-btn active">Book Now</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image: url('photos/main photo.JPG');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <h1>Book Your Stay</h1>
+    <p>Check availability and send your booking request</p>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <span class="section-label">How It Works</span>
+  <h2 class="section-title">Simple Booking in 4 Steps</h2>
+  <div class="section-divider"></div>
+  <div class="steps-grid">
+    <div class="step reveal">
+      <div class="step-num">1</div>
+      <h4>Check the Calendar</h4>
+      <p>Green days are available. Orange means partially booked. Red days are fully booked.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">2</div>
+      <h4>Select Your Dates</h4>
+      <p>Click your check-in date, then click your check-out date on the calendar.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">3</div>
+      <h4>Fill the Form</h4>
+      <p>Enter your name, contact details, number of guests and rooms needed.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">4</div>
+      <h4>We'll Contact You</h4>
+      <p>You'll get a confirmation email. The owner will reach out within 24 hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING CALENDAR + FORM -->
+<section style="background: var(--bg-dark); padding: 4rem 2rem;">
+  <div class="booking-layout">
+
+    <!-- Calendar -->
+    <div>
+      <div class="calendar-wrapper">
+        <div class="calendar-header">
+          <button class="cal-nav-btn" id="prevMonth" aria-label="Previous month">&#8249;</button>
+          <span class="cal-month-title" id="calMonthTitle">Loading…</span>
+          <button class="cal-nav-btn" id="nextMonth" aria-label="Next month">&#8250;</button>
+        </div>
+        <div class="cal-weekdays">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+          <span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div class="cal-days" id="calDays"></div>
+        <div class="cal-legend">
+          <div class="legend-item">
+            <div class="legend-dot dot-available"></div> Available
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot dot-partial"></div> Partially Booked
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot dot-booked"></div> Fully Booked
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot dot-selected"></div> Your Selection
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="booking-form-wrapper">
+      <h3>Your Booking Details</h3>
+      <p>Select dates on the calendar, then fill in your details below.</p>
+
+      <div class="selected-dates-display" id="selectedDatesDisplay">
+        Select your check-in date on the calendar.
+      </div>
+
+      <form id="bookingForm" novalidate>
+        <!-- Hidden date fields populated by calendar.js -->
+        <input type="hidden" id="checkIn"  name="check_in">
+        <input type="hidden" id="checkOut" name="check_out">
+
+        <div class="form-group">
+          <label for="guestName">Full Name *</label>
+          <input type="text" id="guestName" name="guest_name"
+                 placeholder="Your full name" required autocomplete="name">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guestEmail">Email Address *</label>
+            <input type="email" id="guestEmail" name="guest_email"
+                   placeholder="you@example.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="guestPhone">Phone Number *</label>
+            <input type="tel" id="guestPhone" name="guest_phone"
+                   placeholder="+91 98765 43210" required autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="numGuests">Total Guests *</label>
+            <select id="numGuests" name="guests" required>
+              <option value="">Select guests</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6">6 Guests</option>
+              <option value="7">7 Guests</option>
+              <option value="8">8 Guests</option>
+              <option value="10">10 Guests</option>
+              <option value="12">12 Guests</option>
+              <option value="15">15 Guests</option>
+              <option value="20">20 Guests (full group)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="numRooms">Rooms Needed *</label>
+            <select id="numRooms" name="rooms" required>
+              <option value="">Select rooms</option>
+              <option value="1">1 Room</option>
+              <option value="2">2 Rooms</option>
+              <option value="3">3 Rooms</option>
+              <option value="4">4 Rooms</option>
+              <option value="5">5 Rooms (Entire Homestay)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="guestMessage">Special Requests <span style="text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <textarea id="guestMessage" name="message"
+                    placeholder="Dietary requirements, arrival time, special occasions, or anything else we should know…"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit-btn" id="submitBtn">
+          Send Booking Request
+        </button>
+
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- OWNER SETUP GUIDE -->
+<section class="setup-guide-section">
+  <div class="setup-guide-inner">
+    <details>
+      <summary>⚙️ &nbsp;Owner Setup Guide — Enable Email Notifications</summary>
+      <div class="setup-guide-body">
+        <p>To receive booking emails and automatically send confirmations to guests, complete these one-time steps:</p>
+        <ol>
+          <li>
+            Go to <strong>emailjs.com</strong> and create a free account
+            (free tier: 200 emails / month — enough for a small homestay).
+          </li>
+          <li>
+            Click <strong>Add New Service</strong> → choose <strong>Gmail</strong>
+            → connect your Google account (<code>priyanka02010@gmail.com</code>).
+            Note your <strong>Service ID</strong>.
+          </li>
+          <li>
+            Go to <strong>Email Templates</strong> → <strong>Create Template</strong>.
+            <br>Make <strong>Template 1</strong> (booking alert for you, the owner):<br>
+            &nbsp;&nbsp;Subject: <code>New Booking Request — {{guest_name}}</code><br>
+            &nbsp;&nbsp;To email: <code>{{to_email}}</code><br>
+            &nbsp;&nbsp;Body: include <code>{{guest_name}}</code>, <code>{{guest_email}}</code>,
+            <code>{{guest_phone}}</code>, <code>{{check_in}}</code>, <code>{{check_out}}</code>,
+            <code>{{nights}}</code>, <code>{{guests}}</code>, <code>{{rooms}}</code>, <code>{{message}}</code>.
+          </li>
+          <li>
+            Make <strong>Template 2</strong> (confirmation for your guest):<br>
+            &nbsp;&nbsp;Subject: <code>Your Booking Request — Dawaipani Homestay</code><br>
+            &nbsp;&nbsp;To email: <code>{{to_email}}</code><br>
+            &nbsp;&nbsp;Body example: <em>"Dear {{guest_name}}, thank you for your request from
+            {{check_in}} to {{check_out}}. We have received your booking request and
+            the owner will contact you within 24 hours to confirm your stay.
+            — Dawaipani Homestay"</em>
+          </li>
+          <li>
+            Go to <strong>Account → API Keys</strong> → copy your <strong>Public Key</strong>.
+          </li>
+          <li>
+            Open <code>js/booking.js</code> and replace the four placeholder values
+            at the top of the file (<code>YOUR_PUBLIC_KEY</code>, <code>YOUR_SERVICE_ID</code>,
+            <code>YOUR_OWNER_TEMPLATE_ID</code>, <code>YOUR_GUEST_TEMPLATE_ID</code>).
+          </li>
+          <li>
+            <strong>To update availability:</strong> edit <code>data/bookings.json</code>
+            — add date ranges to <code>fullyBooked</code> or <code>partiallyBooked</code>
+            arrays, then commit and push to GitHub. The calendar updates automatically.
+          </li>
+        </ol>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Dawaipani Homestay &nbsp;·&nbsp; Dawaipani, Darjeeling District, West Bengal &nbsp;·&nbsp; <a href="mailto:priyanka02010@gmail.com">priyanka02010@gmail.com</a></p>
+  <p>A family-run mountain retreat in the Eastern Himalayas</p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

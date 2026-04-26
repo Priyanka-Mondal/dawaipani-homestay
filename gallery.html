@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery — Dawaipani Homestay, Darjeeling. Himalayan views, cozy rooms, home-cooked dining, and mountain living.">
+  <title>Gallery — Dawaipani Homestay</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔</text></svg>">
+</head>
+<body>
+
+<nav id="mainNav" class="scrolled">
+  <a href="index.html" class="nav-logo">Dawai<span>pani</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="booking.html" class="nav-book-btn">Book Now</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image: url('photos/98694bfd-e711-434e-a000-c55fc86c6946.JPG');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <h1>Gallery</h1>
+    <p>Explore Dawaipani through our lens</p>
+  </div>
+</div>
+
+<section class="gallery-section" style="padding: 4rem 2rem;">
+  <span class="section-label">Photos</span>
+  <h2 class="section-title">Our Mountain World</h2>
+  <div class="section-divider"></div>
+  <p class="section-subtitle">From Himalayan panoramas to cozy room interiors — every corner of Dawaipani tells a story.</p>
+
+  <div class="gallery-grid" id="galleryGrid">
+
+    <!-- The property -->
+    <div class="gallery-item">
+      <img src="photos/main photo.JPG"
+           alt="Dawaipani Homestay — main view with lush mountain backdrop" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="photos/835f2a2a-b0d6-4ad8-93b6-548201d780e2.JPG"
+           alt="Homestay exterior with colourful Tibetan prayer flags" loading="lazy">
+    </div>
+
+    <!-- Views -->
+    <div class="gallery-item">
+      <img src="photos/68c79c0e-81f4-49b1-85cf-fa67b04e85c0.JPG"
+           alt="Breathtaking panoramic view of the Kangchenjunga range" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="photos/0ee48673-cfb5-4a5e-9b84-ca078c8ce175.JPG"
+           alt="Silhouette looking out from the balcony over the hills" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="photos/98694bfd-e711-434e-a000-c55fc86c6946.JPG"
+           alt="Golden sunset view from the open balcony" loading="lazy">
+    </div>
+
+    <!-- Night ambience -->
+    <div class="gallery-item">
+      <img src="photos/666def5d-f635-4ab4-aaf1-29031b2ab150.JPG"
+           alt="Homestay lit up beautifully at night with blue lights" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="photos/7bfb3d35-8cb9-417a-92e4-3e10b6d14ae2.JPG"
+           alt="LED-lit corridor glowing in blue and amber at night" loading="lazy">
+    </div>
+
+    <!-- Rooms -->
+    <div class="gallery-item">
+      <img src="photos/2d017e26-0465-4415-89f4-2ba5ccd3a355.JPG"
+           alt="Cosy room with warm wooden-panelled walls and two beds" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="photos/0e0f4eb5-1aaf-4afd-a3ed-e516085449d5.JPG"
+           alt="Bright bedroom interior with green curtains" loading="lazy">
+    </div>
+
+    <!-- Dining -->
+    <div class="gallery-item">
+      <img src="photos/a524b038-0417-4b89-a8e7-1b76fbd98bb7.JPG"
+           alt="Home-cooked thali served on the open terrace with mountain views" loading="lazy">
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <span class="section-label">Love What You See?</span>
+  <h2 class="section-title">Come Experience It in Person</h2>
+  <div class="section-divider"></div>
+  <p class="section-subtitle">No photo can do justice to waking up with the Himalayas outside your window.</p>
+  <a href="booking.html" class="btn-primary" style="font-size:1.05rem; padding: 0.95rem 2.4rem;">Book Your Stay</a>
+</section>
+
+<footer>
+  <p>© 2026 Dawaipani Homestay &nbsp;·&nbsp; Dawaipani, Darjeeling District, West Bengal &nbsp;·&nbsp; <a href="mailto:priyanka02010@gmail.com">priyanka02010@gmail.com</a></p>
+  <p>A family-run mountain retreat in the Eastern Himalayas</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightboxClose">✕</span>
+  <span class="lightbox-prev" id="lightboxPrev">&#8249;</span>
+  <img id="lightboxImg" src="" alt="Gallery photo">
+  <span class="lightbox-next" id="lightboxNext">&#8250;</span>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
