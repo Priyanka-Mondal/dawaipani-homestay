@@ -273,16 +273,16 @@ section { padding: 5rem 2rem; }
   margin: 0 auto;
   align-items: center;
 }
-.about-image-stack { position: relative; height: 480px; }
+.about-image-stack { position: relative; height: 530px; }
 .about-img-main {
-  width: 76%; height: 380px;
+  width: 76%; height: 310px;
   object-fit: cover;
   border-radius: 8px;
   position: absolute; top: 0; left: 0;
   box-shadow: var(--shadow);
 }
 .about-img-secondary {
-  width: 58%; height: 240px;
+  width: 60%; height: 205px;
   object-fit: cover;
   border-radius: 8px;
   position: absolute; bottom: 0; right: 0;
