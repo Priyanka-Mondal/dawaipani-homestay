@@ -121,9 +121,9 @@ nav.scrolled {
 }
 .hero-badge {
   display: inline-block;
-  background: rgba(201,169,110,0.15);
-  border: 1px solid var(--gold);
-  color: var(--gold);
+  background: rgba(74,122,90,0.25);
+  border: 1px solid var(--green-light);
+  color: var(--green-light);
   padding: 0.3rem 1rem;
   border-radius: 20px;
   font-size: 0.78rem;
