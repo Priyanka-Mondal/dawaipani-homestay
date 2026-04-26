@@ -50,17 +50,19 @@ nav.scrolled {
   color: var(--gold);
   text-decoration: none;
   letter-spacing: 0.3px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
 }
 .nav-logo span { color: var(--sky); }
 
 .nav-links { display: flex; gap: 2.2rem; list-style: none; align-items: center; }
 .nav-links a {
-  color: var(--cream);
+  color: #fff;
   text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 0.6px;
   font-family: Arial, sans-serif;
   transition: color 0.2s;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
 }
 .nav-links a:hover,
 .nav-links a.active { color: var(--gold); }
@@ -106,7 +108,8 @@ nav.scrolled {
   position: absolute; inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.15) 0%,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.35) 30%,
     rgba(0,0,0,0.45) 55%,
     rgba(13,11,8,0.92) 100%
   );
