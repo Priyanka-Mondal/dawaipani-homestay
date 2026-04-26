@@ -6,7 +6,7 @@ const EMAILJS_PUBLIC_KEY     = 'Cv4p96w9L7Tjq0tRs';
 const EMAILJS_SERVICE_ID     = 'service_jwiypzb';
 const EMAILJS_OWNER_TEMPLATE = 'template_2qgw57l';          // email sent to you
 const EMAILJS_GUEST_TEMPLATE = 'template_9dm35se';          // confirmation to guest
-const OWNER_EMAIL            = 'priyanka02010@gmail.com';
+const OWNER_EMAIL            = 'placeholder@gmail.com';
 // ============================================================
 
 const MONTH_NAMES = ['January','February','March','April','May','June',
